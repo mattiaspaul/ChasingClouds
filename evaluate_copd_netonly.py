@@ -127,7 +127,7 @@ def main():
     
     pvt_dense_exp,pvt_dense_insp,indices_all,pvt_copd_lm_insp,lm_exp0,pvt_copd_dim,pvt_copd_spacing = load_validation_data()
 
-    ppwc,run_loss_ = torch.load('models/pvt_ppwc_selftrain_alone_63999.pth'); lin_embed0 = None; model0 = None;
+    ppwc,run_loss_ = torch.load('models/divroc_ppwc_selftrain.pth'); lin_embed0 = None; model0 = None;
 
 
     scale_ppwc=47
