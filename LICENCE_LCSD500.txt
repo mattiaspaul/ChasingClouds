@@ -1,0 +1,22 @@
+LICENCE
+
+LCSD500: Longitudinal Cancer Screening Dataset 
+The LCSD500 is created as a derivative from the TCIA National Lung Screening Trial CT dataset and published under CC BY 4.0 licence
+
+Please see more info and guidelines on reusing the data on https://wiki.cancerimagingarchive.net/display/NLST and further below.
+
+Automatic lung vessel segmentations were obtained using the TotalSegmentator https://github.com/wasserth/TotalSegmentator please give credit to them as well https://doi.org/10.1148/ryai.230024 "TotalSegmentator: Robust Segmentation of 104 Anatomic Structures in CT Images".
+
+Citations & Data Usage Policy 
+Users must abide by the TCIA Data Usage Policy and Restrictions [https://wiki.cancerimagingarchive.net/x/c4hF]. Attribution should include references to the following citations:
+Data Citation
+
+ National Lung Screening Trial Research Team. (2013). Data from the National Lung Screening Trial (NLST) [Data set]. The Cancer Imaging Archive. https://doi.org/10.7937/TCIA.HMQ8-J677
+Publication Citation
+
+National Lung Screening Trial Research Team*; Aberle DR, Adams AM, Berg CD, Black WC, Clapp JD, Fagerstrom RM, Gareen IF, Gatsonis C, Marcus PM, Sicks JD (2011). Reduced Lung-Cancer Mortality with Low-Dose Computed Tomographic Screening. New England Journal of Medicine, 365(5), 395–409. https://doi.org/10.1056/nejmoa1102873
+
+*note:  List of National Lung Screening Trial members (pages 1-31 of this supplemental PDF to this article) [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4356534/bin/NIHMS320819-supplement-Supplement1.pdf]
+TCIA Citation
+
+Clark K, Vendt B, Smith K, Freymann J, Kirby J, Koppel P, Moore S, Phillips S, Maffitt D, Pringle M, Tarbox L, Prior F. The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository, Journal of Digital Imaging, Volume 26, Number 6, December, 2013, pp 1045-1057. DOI: https://doi.org/10.1007/s10278-013-9622-7
