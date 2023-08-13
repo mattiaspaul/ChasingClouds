@@ -22,6 +22,14 @@ Follow instructions to download required files from public datasets <https://git
 Next you can run the PointPWC model using ``python evaluate_copd_netonly.py``. 
 Note that the DiVRoC regularisation (which improves TRE slightly) and instance optimisation (brings substantial gains) will be added soon.
 
+### Features
+- [x] Dataset (LCSD500 and instructions for PVT1010)
+- [x] Environment and guide to compile PPWC library
+- [x] Base model(s) (pth) and code for inference
+- [x] TRE evaluation (without visualisation) 
+- [ ] More models and DiVRoC regularisation
+- [ ] Code for inference with Adam instance optimisation
+- [ ] Visualisation and training code
 
 # Paper
 **by Mattias P. Heinrich, Alexander Bigalke, Christoph Großbröhmer (Uni Lübeck) and Lasse Hansen (EchoScout GmbH)**
