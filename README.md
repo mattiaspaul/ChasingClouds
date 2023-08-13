@@ -15,7 +15,10 @@ virutalenv venv
 source venv/bin/activate
 pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
 pip3 install -r requirements.txt
+cd point_pwc/pointnet2/lib; python setup.py install; cd ../../..
 ```
+Follow instructions to download required files from public datasets <https://github.com/mattiaspaul/ChasingClouds/blob/main/pvtcopd_vtk/README.md>
+Next you can run the PointPWC model using ``python evaluate_copd_netonly.py``. Note that instance optimisation will be added soon.
 
 
 # Paper
