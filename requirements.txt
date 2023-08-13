@@ -9,7 +9,7 @@ ninja==1.11.1
 numpy==1.25.2
 packaging==23.1
 pyvista==0.41.1
-pytorch-triton==2.1.0+e6216047b8
+pytorch-triton==2.1.0
 sympy==1.11.1
 torch==2.1.0.dev20230812+cu121
 torchinfo==1.8.0
