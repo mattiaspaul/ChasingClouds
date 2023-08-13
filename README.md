@@ -18,7 +18,9 @@ pip3 install -r requirements.txt
 cd point_pwc/pointnet2/lib; python setup.py install; cd ../../..
 ```
 Follow instructions to download required files from public datasets <https://github.com/mattiaspaul/ChasingClouds/blob/main/pvtcopd_vtk/README.md>
-Next you can run the PointPWC model using ``python evaluate_copd_netonly.py``. Note that instance optimisation will be added soon.
+
+Next you can run the PointPWC model using ``python evaluate_copd_netonly.py``. 
+Note that the DiVRoC regularisation (which improves TRE slightly) and instance optimisation (brings substantial gains) will be added soon.
 
 
 # Paper
