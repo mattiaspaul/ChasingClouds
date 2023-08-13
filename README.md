@@ -1,7 +1,7 @@
 ## Chasing clouds: Differentiable volumetric rasterisation of point clouds as a highly efficient and accurate loss for large-scale deformable 3D registration
 Code, models and dataset for ICCV 2023 (oral) paper on differentiable volumetric rasterisation of point clouds for 3D registration
 
-Trained models can be found in the subdirectory models, inference and evaluation code for the geometric networks is already available. Instance optimisation and training of models will follow soon (at latest in time for ICCV in October 2023).
+Trained models can be found in the subdirectory models, inference, binaries for Adam optimisation and evaluation code for the geometric networks is already available. Open source code for instance optimisation and training of models will follow soon (at latest in time for ICCV in October 2023).
 
 # Datasets
 The newly created LCSD500 dataset is available for download at https://cloud.imi.uni-luebeck.de/s/mtPmXoeNrnntNBg (170MB).
@@ -16,19 +16,21 @@ source venv/bin/activate
 pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
 pip3 install -r requirements.txt
 cd point_pwc/pointnet2/lib; python setup.py install; cd ../../..
+mkdir predict
 ```
 Follow instructions to download required files from public datasets <https://github.com/mattiaspaul/ChasingClouds/blob/main/pvtcopd_vtk/README.md>
 
-Next you can run the PointPWC model using ``python evaluate_copd_netonly.py``. 
-Note that the DiVRoC regularisation (which improves TRE slightly) and instance optimisation (brings substantial gains) will be added soon.
-
+Next you can run the PointPWC model using ``python evaluate_copd_netonly.py -O predict``. 
+Note that the standalone DiVRoC regularisation (which improves TRE slightly) will be added soon.
+Instance optimisation is available as binary by calling ``python dist/divroc_adam.py -O predict``, which improves the PPWC predictions to about **2.37 mm** TRE (state-of-the-art for PVT1010)! The source code will be released once IP clearance is ready (end September 2023).
 ### Features
 - [x] Dataset (LCSD500 and instructions for PVT1010)
 - [x] Environment and guide to compile PPWC library
 - [x] Base model(s) (pth) and code for inference
 - [x] TRE evaluation (without visualisation) 
-- [ ] More models and DiVRoC regularisation
-- [ ] Code for inference with Adam instance optimisation
+- [x] Binaries for inference with Adam instance optimisation
+- [ ] Source code for DiVRoC distance/regularisation
+- [ ] More models and DiVRoC ablations
 - [ ] Visualisation and training code
 
 # Paper
