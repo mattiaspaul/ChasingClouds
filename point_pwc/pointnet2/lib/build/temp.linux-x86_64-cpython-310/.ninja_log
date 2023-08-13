@@ -1,0 +1,10 @@
+# ninja log v5
+6	24897	1691924512098840973	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/sampling.o	38f4ad4a058aca8f
+5	27348	1691924514550818420	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/interpolate.o	35a1b9e4dc2933c5
+4	28075	1691924515278811725	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/group_points.o	b614fa72a027ed99
+0	28613	1691924515806806868	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/ball_query.o	eb3b1941bad7f451
+5	40808	1691924528018694546	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/interpolate_gpu.o	917e50926eadb8f3
+4	41151	1691924528366691345	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/ball_query_gpu.o	ffcb541e9f0c709a
+5	41455	1691924528670688549	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/group_points_gpu.o	32ff2cc122c06b91
+7	42691	1691924529902677217	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/sampling_gpu.o	e6437cff106c9c4b
+6	49027	1691924536214619160	/data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/pointnet2_api.o	c6bd9604f3e01f10

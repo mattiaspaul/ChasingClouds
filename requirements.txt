@@ -1,0 +1,17 @@
+filelock==3.9.0
+fsspec==2023.4.0
+Jinja2==3.1.2
+MarkupSafe==2.1.2
+mpmath==1.2.1
+networkx==3.0
+nibabel==5.1.0
+ninja==1.11.1
+numpy==1.25.2
+packaging==23.1
+pyvista==0.41.1
+pytorch-triton==2.1.0+e6216047b8
+sympy==1.11.1
+torch==2.1.0.dev20230812+cu121
+torchinfo==1.8.0
+tqdm==4.66.1
+typing_extensions==4.4.0

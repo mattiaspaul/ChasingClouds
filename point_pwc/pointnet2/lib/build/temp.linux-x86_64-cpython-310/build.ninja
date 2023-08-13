@@ -1,0 +1,40 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /data_rechenknecht02_2/heinrich/mambaforge/bin/nvcc
+
+cflags = -pthread -B /data_rechenknecht02_2/heinrich/mambaforge/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /data_rechenknecht02_2/heinrich/mambaforge/include -fPIC -O2 -isystem /data_rechenknecht02_2/heinrich/mambaforge/include -fPIC -I/data_rechenknecht02_2/heinrich/envarmor/lib/python3.10/site-packages/torch/include -I/data_rechenknecht02_2/heinrich/envarmor/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/data_rechenknecht02_2/heinrich/envarmor/lib/python3.10/site-packages/torch/include/TH -I/data_rechenknecht02_2/heinrich/envarmor/lib/python3.10/site-packages/torch/include/THC -I/data_rechenknecht02_2/heinrich/mambaforge/include -I/data_rechenknecht02_2/heinrich/envarmor/include -I/data_rechenknecht02_2/heinrich/mambaforge/include/python3.10 -c
+post_cflags = -g -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=pointnet2_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+cuda_cflags = -I/data_rechenknecht02_2/heinrich/envarmor/lib/python3.10/site-packages/torch/include -I/data_rechenknecht02_2/heinrich/envarmor/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/data_rechenknecht02_2/heinrich/envarmor/lib/python3.10/site-packages/torch/include/TH -I/data_rechenknecht02_2/heinrich/envarmor/lib/python3.10/site-packages/torch/include/THC -I/data_rechenknecht02_2/heinrich/mambaforge/include -I/data_rechenknecht02_2/heinrich/envarmor/include -I/data_rechenknecht02_2/heinrich/mambaforge/include/python3.10 -c
+cuda_post_cflags = -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -O2 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=pointnet2_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_75,code=compute_75 -gencode=arch=compute_75,code=sm_75 -std=c++17
+cuda_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+
+
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/ball_query.o: compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/ball_query.cpp
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/ball_query_gpu.o: cuda_compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/ball_query_gpu.cu
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/group_points.o: compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/group_points.cpp
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/group_points_gpu.o: cuda_compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/group_points_gpu.cu
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/interpolate.o: compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/interpolate.cpp
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/interpolate_gpu.o: cuda_compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/interpolate_gpu.cu
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/pointnet2_api.o: compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/pointnet2_api.cpp
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/sampling.o: compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/sampling.cpp
+build /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/build/temp.linux-x86_64-cpython-310/src/sampling_gpu.o: cuda_compile /data_rechenknecht02_2/heinrich/pyarmor/point_pwc/pointnet2/lib/src/sampling_gpu.cu
+
+
+
+
+
+
