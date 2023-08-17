@@ -4,8 +4,8 @@ Code, models and dataset for ICCV 2023 (oral) paper on differentiable volumetric
 Trained models can be found in the subdirectory models, inference, binaries for Adam optimisation and evaluation code for the geometric networks is already available. Open source code for instance optimisation and training of models will follow soon (at latest in time for ICCV in October 2023).
 
 # Datasets
-The newly created LCSD500 dataset is available for download at https://cloud.imi.uni-luebeck.de/s/mtPmXoeNrnntNBg (170MB).
-More information on how to obtain PVT_COPD can be found in pvtcopd_vtk/README.md
+The newly created LCSD500 dataset (paired vessel point clouds) is available for download at https://cloud.imi.uni-luebeck.de/s/mtPmXoeNrnntNBg (170MB), automatic correspondences are placed in LCSD500_keypoints_corrfield.zip.
+More information on how to obtain the PVT_COPD dataset used for training and evaluation of our models can be found in pvtcopd_vtk/README.md
 
 # Quick Start
 
