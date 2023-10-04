@@ -5,6 +5,7 @@ Trained models can be found in the subdirectory models, inference, binaries for 
 
 See open open job opportunities PostDoc and/or PhD at <http://mpheinrich.de/opportunities.html>
 
+Check out an interactive live-demo or apply DiVRoC on your own data at <https://huggingface.co/spaces/mattiaspaul/chasingclouds>
 
 # Datasets
 The newly created LCSD500 dataset (paired vessel point clouds) is available for download at https://cloud.imi.uni-luebeck.de/s/mtPmXoeNrnntNBg (170MB), automatic correspondences are placed in LCSD500_keypoints_corrfield.zip.
@@ -32,7 +33,8 @@ Instance optimisation is available as binary by calling ``python dist/divroc_ada
 - [x] Base model(s) (pth) and code for inference
 - [x] TRE evaluation (without visualisation) 
 - [x] Binaries for inference with Adam instance optimisation
-- [ ] Source code for DiVRoC distance/regularisation
+- [x] Source code for DiVRoC
+- [ ] Source code for distance/regularisation incl. training
 - [ ] More models and DiVRoC ablations
 - [ ] Visualisation and training code
 
