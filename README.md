@@ -1,7 +1,7 @@
 ## Chasing clouds: Differentiable volumetric rasterisation of point clouds as a highly efficient and accurate loss for large-scale deformable 3D registration
 Code, models and dataset for ICCV 2023 (oral) paper on differentiable volumetric rasterisation of point clouds for 3D registration
 
-Trained models can be found in the subdirectory models, inference, binaries for Adam optimisation and evaluation code for the geometric networks is already available. Open source code for instance optimisation and training of models will follow soon (at latest in time for ICCV in October 2023).
+Trained models can be found in the subdirectory models, inference, binaries for Adam optimisation and evaluation code for the geometric networks is already available. Open source code for instance optimisation has been released (scripts for training models will follow in October 2023).
 
 See open open job opportunities PostDoc and/or PhD at <http://mpheinrich.de/opportunities.html>
 
@@ -26,7 +26,7 @@ Follow instructions to download required files from public datasets <https://git
 
 Next you can run the PointPWC model using ``python evaluate_copd_netonly.py -O predict``. 
 Note that the standalone DiVRoC regularisation (which improves TRE slightly) will be added soon.
-Instance optimisation is available as binary by calling ``python dist/divroc_adam.py -O predict``, which improves the PPWC predictions to about **2.37 mm** TRE (state-of-the-art for PVT1010)! The source code will be released once IP clearance is ready (end September 2023).
+Instance optimisation is available as binary by calling ``python dist/divroc_adam.py -O predict``, which improves the PPWC predictions to about **2.37 mm** TRE (state-of-the-art for PVT1010)! Source code for the DiVRoC method is also available now.
 ### Features
 - [x] Dataset (LCSD500 and instructions for PVT1010)
 - [x] Environment and guide to compile PPWC library
