@@ -6,6 +6,7 @@ Trained models can be found in the subdirectory models, inference, binaries for 
 See open open job opportunities PostDoc and/or PhD at <http://mpheinrich.de/opportunities.html>
 
 Watch a recorded version of the ICCV 2023 talk at <https://cloud.imi.uni-luebeck.de/s/GZzQJwWdz4jx8jr> 
+Some extended slides from a recent abstract presentation at BVM 2024 can be found here: <https://cloud.imi.uni-luebeck.de/s/2mHcy3TCZnpjdxr>
 
 Check out an interactive live-demo or apply DiVRoC on your own data at <https://huggingface.co/spaces/mattiaspaul/chasingclouds>
 
