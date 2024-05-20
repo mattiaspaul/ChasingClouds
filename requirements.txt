@@ -7,7 +7,6 @@ networkx==3.0
 nibabel==5.1.0
 ninja==1.11.1
 gdown==4.7.1
-numpy==1.25.2
 packaging==23.1
 pyvista==0.41.1
 sympy==1.11.1
