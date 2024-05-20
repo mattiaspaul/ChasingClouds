@@ -18,9 +18,9 @@ More information on how to obtain the PVT_COPD dataset used for training and eva
 
 ```
 git clone https://github.com/mattiaspaul/ChasingClouds.git
-virutalenv venv
+virtualenv venv
 source venv/bin/activate
-pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
+pip3 install torch torchvision torchaudio
 pip3 install -r requirements.txt
 cd point_pwc/pointnet2/lib; python setup.py install; cd ../../..
 mkdir predict
